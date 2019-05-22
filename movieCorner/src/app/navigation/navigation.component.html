@@ -1,0 +1,104 @@
+<div class='sideNav'>
+  <button nz-button [nzType]="'primary'" (click)="toggleCollapsed()" style="margin-bottom: 10px;">
+    <i nz-icon [type]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
+  </button>
+  <ul nz-menu [nzMode]="'inline'" nzTheme="dark" [nzInlineCollapsed]="isCollapsed">
+
+    <li nz-submenu>
+      <span title>
+        <i nz-icon type="appstore"></i>
+        <span>Genres</span>
+      </span>
+      <ul>
+          <li [routerLink]="['/genresMovie',genres]"  nz-menu-item *ngFor="let genres of genres_m">{{genres}}</li>
+        <!-- <li nz-menu-item>Action</li>
+        <li nz-menu-item>Comedy</li>
+        <li nz-menu-item>Crime</li>
+        <li nz-menu-item>Drama</li>
+        <li nz-menu-item>Thriller</li>
+        <li nz-menu-item>Fantasy</li>
+        <li nz-menu-item>Romance</li>
+        <li nz-menu-item>Music</li>
+        <li nz-menu-item>War</li>
+        <li nz-menu-item>History</li>
+        <li nz-menu-item>Sci-fi</li>
+        <li nz-menu-item>Western</li>
+        <li nz-menu-item>Mystery</li>
+        <li nz-menu-item>Adventure</li>
+        <li nz-menu-item>Animation</li>
+        <li nz-menu-item>Family</li>
+        <li nz-menu-item>Film-Noir</li> -->
+
+      </ul>
+    </li>
+    <li nz-submenu>
+      <span title>
+          <i nz-icon nzType="calendar" nzTheme="outline"></i>
+        <span>Year</span>
+      </span>
+      <ul style='background-color: aliceblue;'>
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" style='color: black;'>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+      </ul>
+    </li>
+    <li nz-submenu>
+      <span title>
+        <i nz-icon nzType="fire" nzTheme="outline"></i>
+        <span>Rating</span>
+      </span>
+      <ul>
+        <li [routerLink]="['/rating',number]" nz-menu-item *ngFor="let number of [1,2,3,4,5,6,7,8,9,10]">{{number}}</li>
+
+      </ul>
+    </li>
+    <li nz-submenu>
+      <span title>
+        <i nz-icon nzType="ellipsis" nzTheme="outline"></i>
+        <span>Language</span>
+      </span>
+      <ul>
+        <li nz-menu-item>English</li>
+
+      </ul>
+    </li>
+    <li nz-submenu>
+      <span title>
+        <i nz-icon nzType="eye" nzTheme="outline"></i>
+        <span>Censor</span>
+      </span>
+      <ul>
+        <li nz-menu-item>U</li>
+        <li nz-menu-item>R</li>
+        <li nz-menu-item>PG</li>
+        <li nz-menu-item>PG-13</li>
+      </ul>
+    </li>
+    <li nz-submenu>
+      <span title>
+        <i nz-icon nzType="picture" nzTheme="outline"></i>
+        <span>Quality</span>
+      </span>
+      <ul>
+        <li nz-menu-item>720p</li>
+        <li nz-menu-item>1080p</li>
+      </ul>
+    </li>
+    <li nz-submenu>
+      <span title>
+        <i nz-icon nzType="hdd" nzTheme="outline"></i>
+        <span>Size</span>
+      </span>
+      <ul>
+        <li nz-menu-item>Above 700 MB</li>
+        <li nz-menu-item>Above 900 MB</li>
+        <li nz-menu-item>Above 1 GB</li>
+        <li nz-menu-item>Above 3 GB</li>
+      </ul>
+    </li>
+
+  </ul>
+</div>

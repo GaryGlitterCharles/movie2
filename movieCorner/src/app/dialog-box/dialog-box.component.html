@@ -1,0 +1,31 @@
+<button mat-button (click)="onNoClick()">
+  <i nz-icon nzType="close" nzTheme="outline"></i>
+</button>
+<mat-tab-group>
+  <mat-tab label="720p">
+    <mat-list role="list">
+      <mat-list-item role="listitem"></mat-list-item>
+      <mat-list-item role="listitem">Item 2</mat-list-item>
+      <mat-list-item role="listitem">Item 3</mat-list-item>
+    </mat-list>
+
+  </mat-tab>
+  <mat-tab label="1080p">
+    <mat-list role="list">
+      <mat-list-item role="listitem">Item 1</mat-list-item>
+      <mat-list-item role="listitem">Item 2</mat-list-item>
+      <mat-list-item role="listitem">Item 3</mat-list-item>
+    </mat-list>
+  </mat-tab>
+
+</mat-tab-group>
+
+<nz-card style="width:898px;" nzTitle="Summary">
+  <p>{{data.datasummary}}</p>
+</nz-card>
+
+<div mat-dialog-actions>
+
+
+
+</div>

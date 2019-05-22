@@ -1,0 +1,26 @@
+.toolBar {
+  background-color: lightgray;
+}
+.example-card {
+  max-width: 200px;
+}
+
+
+mat-grid-tile {
+  background: lightblue;
+}
+.flex-container {
+  position: absolute;
+  left: 263px;
+  top: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-container > div {
+  margin: 10px;
+}
+.mat-card-avatar {
+  display: none;
+}
